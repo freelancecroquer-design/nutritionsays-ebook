@@ -21,7 +21,7 @@ export const ebookContent = {
             ],
             icon: "Sparkles",
             image: "/images/arianna-pointing.jpg",
-            imageAlt: "Arianna García explicando",
+            imageAlt: "Arianna García explicando un plato equilibrado",
             imagePosition: "right"
         },
         {
@@ -39,7 +39,7 @@ export const ebookContent = {
             ],
             icon: "Scale",
             image: "/images/arianna-can.jpg",
-            imageAlt: "Arianna García analizando productos",
+            imageAlt: "Arianna García con fruta fresca",
             imagePosition: "left"
         },
         {
@@ -60,7 +60,7 @@ export const ebookContent = {
             ],
             icon: "Utensils",
             image: "/images/arianna-bag.jpg",
-            imageAlt: "Compra consciente",
+            imageAlt: "Arianna en el mercado de vegetales",
             imagePosition: "right"
         },
         {
@@ -78,7 +78,7 @@ export const ebookContent = {
             ],
             icon: "Stethoscope",
             image: "/images/arianna-consult.jpg",
-            imageAlt: "Consulta Nutricional",
+            imageAlt: "Consulta Nutricional con Arianna",
             imagePosition: "left"
         },
         {
@@ -93,8 +93,8 @@ export const ebookContent = {
                 "3. La personalización: No existe una sola forma correcta de alimentarse. Cada persona tiene necesidades, gustos, tiempos y contextos distintos. Un plan efectivo es aquel que se ajusta a tu vida real, no el que te exige cambiarla por completo."
             ],
             icon: "Activity",
-            image: "/images/arianna-edited-2.png",
-            imageAlt: "Equilibrio",
+            image: "/images/arianna-bio.png",
+            imageAlt: "Arianna meditando y comiendo consciente",
             imagePosition: "right"
         },
         {
@@ -111,8 +111,8 @@ export const ebookContent = {
                 "El bienestar no se trata solo de comer bien, sino de vivir activamente, descansar, sentirte fuerte y disfrutar el proceso."
             ],
             icon: "Move",
-            image: "/images/arianna-bio.png",
-            imageAlt: "Vida activa",
+            image: "/images/arianna-pointing.jpg",
+            imageAlt: "Arianna haciendo actividad",
             imagePosition: "left"
         },
         {
@@ -131,8 +131,22 @@ export const ebookContent = {
             ],
             icon: "Heart",
             image: "/images/label-closeup.jpg",
-            imageAlt: "Bienestar integral",
+            imageAlt: "Arianna leyendo etiquetas",
             imagePosition: "right"
+        },
+        {
+            id: "outro",
+            title: "Conclusión",
+            subtitle: "Este es solo el comienzo",
+            content: [
+                "Gracias por llegar hasta aquí. Espero que estas páginas te hayan servido para ver la nutrición con otros ojos.",
+                "Recuerda que cada paso cuenta y que tu bienestar es un proyecto a largo plazo.",
+                "Si quieres seguir aprendiendo, te espero en mis redes sociales y en consulta."
+            ],
+            icon: "Sparkles",
+            image: null,
+            imageAlt: "",
+            imagePosition: "center"
         }
     ],
     footer: {

@@ -149,61 +149,81 @@ export default function Home() {
         <div className="space-y-32">
 
           {ebookContent.sections.map((section, idx) => {
-            const Icon = iconMap[section.icon] || Sparkles;
             const isReverse = idx % 2 !== 0; // Alternate layout
 
+            // Custom Icon Logic
+            let CustomIconStr = null;
+            if (section.id === "que-es-nutricion") CustomIconStr = "/images/icon-protein.png";
+            if (section.id === "dieta") CustomIconStr = "/images/icon-fruits.png";
+
+            const Icon = iconMap[section.icon] || Sparkles;
+
             return (
-              <section key={section.id} id={section.id} className="scroll-mt-32 print:break-inside-avoid">
+              <section key={section.id} id={section.id} className="scroll-mt-32 print:break-inside-avoid min-h-[70vh] flex flex-col justify-center">
 
                 {/* Chapter Header */}
                 <div className="flex items-center gap-4 mb-10 justify-center">
-                  <span className="bg-[#c8db6c] text-[#240046] w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold font-serif shadow-sm">
+                  <span className="bg-[#c8db6c] text-[#240046] w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold font-serif shadow-lg border-2 border-[#240046]">
                     {idx + 1}
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#240046] m-0">
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#240046] m-0 tracking-tight">
                     {section.title}
                   </h2>
                 </div>
 
-                {/* Card Complex Layout */}
+                {/* Card Complex Layout - Glassmorphism & Borders */}
                 <div className={clsx(
-                  "bg-white rounded-[2.5rem] shadow-sm border border-neutral-100 overflow-hidden flex flex-col md:flex-row gap-0 group hover:shadow-lg transition-shadow duration-500",
+                  "rounded-[3rem] shadow-xl overflow-hidden flex flex-col md:flex-row gap-0 group transition-all duration-500 hover:shadow-2xl border border-[#b9b1ff]",
+                  "bg-white/80 backdrop-blur-xl relative", // Glass effect base
                   isReverse ? "md:flex-row-reverse" : ""
                 )}>
+
+                  {/* Decorative Border Line */}
+                  <div className={clsx("absolute top-0 bottom-0 w-2 bg-[#c8db6c] z-20 hidden md:block", isReverse ? "right-1/2 translate-x-1/2" : "left-1/2 -translate-x-1/2")} />
+
                   {/* Image Side (50%) */}
                   {section.image && (
-                    <div className="w-full md:w-1/2 min-h-[300px] md:min-h-[500px] relative overflow-hidden">
+                    <div className="w-full md:w-1/2 min-h-[400px] md:min-h-[600px] relative overflow-hidden">
                       <Image
                         src={section.image}
                         alt={section.title}
                         fill
-                        className="object-cover transition-transform duration-[3s] group-hover:scale-105"
+                        className="object-cover transition-transform duration-[3s] group-hover:scale-110"
                       />
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-[#240046]/10 mix-blend-multiply transition-opacity group-hover:opacity-0" />
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#240046]/40 via-transparent to-transparent mix-blend-multiply opacity-60" />
                     </div>
                   )}
 
                   {/* Content Side (50%) */}
-                  <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center bg-white relative">
-                    {/* Decorative Icon */}
-                    <div className="absolute top-8 right-8 text-[#f7ffd0] rotate-12">
-                      <Icon size={120} strokeWidth={0.5} />
+                  <div className="w-full md:w-1/2 p-8 md:p-20 flex flex-col justify-center relative">
+
+                    {/* Decorative Background Icon */}
+                    <div className="absolute top-10 right-10 opacity-10 rotate-12 pointer-events-none">
+                      {CustomIconStr ? (
+                        <div className="w-40 h-40 relative">
+                          <Image src={CustomIconStr} alt="icon" fill className="object-contain" />
+                        </div>
+                      ) : (
+                        <Icon size={160} strokeWidth={1} />
+                      )}
                     </div>
 
                     <div className="relative z-10">
-                      <span className="text-[#008b92] font-bold uppercase tracking-widest text-xs mb-4 block">
+                      <span className="text-[#008b92] font-bold uppercase tracking-widest text-xs mb-6 block bg-[#c8db6c]/20 w-fit px-3 py-1 rounded-md">
                         Capítulo {idx + 1}
                       </span>
 
-                      <h3 className="text-3xl font-serif text-[#240046] mb-6 leading-tight">
+                      <h3 className="text-3xl md:text-4xl font-serif text-[#240046] mb-8 leading-tight drop-shadow-sm">
                         {section.subtitle}
                       </h3>
 
-                      <div className="space-y-6 text-lg text-neutral-600 leading-relaxed font-light">
+                      <div className="space-y-6 text-lg text-neutral-700 leading-relaxed font-normal">
                         {section.content.map((p, i) => (
                           <p key={i} className={clsx(
-                            p.startsWith("•") || p.match(/^\d\./) ? "pl-4 border-l-2 border-[#c8db6c] italic text-neutral-700" : ""
+                            p.startsWith("•") || p.match(/^\d\./)
+                              ? "pl-6 border-l-4 border-[#c8db6c] italic text-neutral-800 bg-[#f7ffd0]/30 py-2 pr-2 rounded-r-lg"
+                              : ""
                           )}>
                             {p}
                           </p>
