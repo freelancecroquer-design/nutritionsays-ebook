@@ -19,7 +19,9 @@ export const ebookContent = {
                 "Es un proceso gradual de aprendizaje y consciencia, donde cada paso cuenta.",
                 "Este ebook es una invitación a ver la nutrición desde un lugar más humano: como una herramienta para conocerte, cuidarte y construir hábitos que perduren."
             ],
-            icon: "Sparkles"
+            icon: "Sparkles",
+            image: "/images/intro.png",
+            imageAlt: "Arianna disfrutando de un té caliente en un ambiente relajado"
         },
         {
             id: "que-es-nutricion",
@@ -40,7 +42,9 @@ export const ebookContent = {
                 "• Educarte para que tomes decisiones conscientes y sostenibles.",
                 "En palabras simples, la nutrición no es hacer dieta, es aprender a vivir mejor."
             ],
-            icon: "Scale"
+            icon: "Scale",
+            image: "/images/what-is.png",
+            imageAlt: "Arianna explicando conceptos de nutrición con alimentos reales"
         },
         {
             id: "dieta",
@@ -60,7 +64,9 @@ export const ebookContent = {
                 "La clave está en el equilibrio: en aprender a disfrutar sin culpa y comer con consciencia.",
                 "Porque la mejor dieta es la que puedes sostener sin sufrirla."
             ],
-            icon: "Utensils"
+            icon: "Utensils",
+            image: "/images/diet.png",
+            imageAlt: "Arianna disfrutando de una comida balanceada con carbohidratos"
         },
         {
             id: "consulta",
@@ -79,7 +85,9 @@ export const ebookContent = {
                 "La consulta nutricional no busca imponer; busca guiarte con respeto, empatía y claridad.",
                 "Tu alimentación es parte de tu historia, y por eso, no puede copiarse de nadie más."
             ],
-            icon: "Stethoscope"
+            icon: "Stethoscope",
+            image: "/images/consultation.png",
+            imageAlt: "Arianna escuchando atentamente en consulta"
         },
         {
             id: "equilibrio",
@@ -92,7 +100,9 @@ export const ebookContent = {
                 "2. El equilibrio: El equilibrio no es comer perfecto. Es mantener una relación coherente con la comida, donde hay espacio para lo nutritivo y también para lo disfrutable. El cuerpo no necesita rigidez, necesita constancia y coherencia.",
                 "3. La personalización: No existe una sola forma correcta de alimentarse. Cada persona tiene necesidades, gustos, tiempos y contextos distintos. Un plan efectivo es aquel que se ajusta a tu vida real, no el que te exige cambiarla por completo. La nutrición personalizada respeta tu historia, tus preferencias y tu entorno. Por eso, la meta no es seguir una dieta, sino aprender a crear tu propio equilibrio."
             ],
-            icon: "Activity"
+            icon: "Activity",
+            image: "/images/learning.png", // Reusing lifestyle image if fitting or fallback
+            imageAlt: "Balance y aprendizaje"
         },
         {
             id: "movimiento",
@@ -111,7 +121,9 @@ export const ebookContent = {
                 "No como castigo, sino como una celebración.",
                 "El bienestar no se trata solo de comer bien, sino de vivir activamente, descansar, sentirte fuerte y disfrutar el proceso."
             ],
-            icon: "Move"
+            icon: "Move",
+            image: "/images/movement.png",
+            imageAlt: "Arianna caminando feliz en el parque"
         },
         {
             id: "aprender",
@@ -129,7 +141,9 @@ export const ebookContent = {
                 "Te invito a seguir aprendiendo, a reconectarte con tu bienestar y a hacer de tu proceso nutricional un camino de autoconocimiento.",
                 "Porque nutrirte empieza cuando decides escucharte."
             ],
-            icon: "Heart"
+            icon: "Heart",
+            image: "/images/learning.png",
+            imageAlt: "Arianna leyendo relajada"
         }
     ],
     footer: {

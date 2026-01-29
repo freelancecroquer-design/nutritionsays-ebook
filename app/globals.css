@@ -5,30 +5,27 @@
   --color-foreground: #240046;
 
   --color-primary: #240046;
-  --color-primary-DEFAULT: #240046;
   --color-primary-light: #b9b1ff;
   --color-primary-dark: #1a0033;
 
   --color-secondary: #c8db6c;
-  --color-secondary-DEFAULT: #c8db6c;
   --color-secondary-light: #f7ffd0;
 
   --color-accent: #008b92;
-  --color-accent-DEFAULT: #008b92;
   --color-accent-light: #efe8f8;
 
   --color-text: #240046;
-  --color-text-DEFAULT: #240046;
   --color-text-muted: rgba(36, 0, 70, 0.7);
 
   --font-serif: var(--font-libre-baskerville), serif;
+  --font-sans: var(--font-dm-sans), sans-serif;
 }
 
 body {
-  background-color: var(--color-accent-light);
+  background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-serif);
-  line-height: 1.625;
+  font-family: var(--font-sans);
+  line-height: 1.6;
 }
 
 h1,
@@ -37,43 +34,52 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: -0.025em;
-  font-weight: 700;
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
 }
 
 /* Glass Panel Utility */
 .glass-panel {
-  background-color: rgb(255 255 255 / 0.4);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgb(255 255 255 / 0.5);
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(36, 0, 70, 0.05);
 }
 
 /* Print Styles */
 @media print {
   @page {
     size: A4;
-    margin: 20mm;
+    margin: 15mm;
   }
 
   body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
     background: white;
-    font-size: 12pt;
+    font-size: 11pt;
     color: black;
   }
 
   .print-break-inside-avoid {
     break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .no-print {
     display: none !important;
   }
 
+  /* Force background printing for images if needed */
+  img {
+    max-width: 100%;
+  }
+
   .glass-panel {
-    border: 1px solid #ccc !important;
+    border: none !important;
     box-shadow: none !important;
     background: none !important;
     backdrop-filter: none !important;
+    page-break-inside: avoid;
   }
 }
