@@ -20,8 +20,9 @@ export const ebookContent = {
                 "Este ebook es una invitación a ver la nutrición desde un lugar más humano: como una herramienta para conocerte, cuidarte y construir hábitos que perduren."
             ],
             icon: "Sparkles",
-            image: "/images/arianna-hero.jpg",
-            imageAlt: "Arianna García - NutritionSays"
+            image: "/images/arianna-pointing.jpg",
+            imageAlt: "Arianna García explicando",
+            imagePosition: "right"
         },
         {
             id: "que-es-nutricion",
@@ -37,8 +38,9 @@ export const ebookContent = {
                 "En palabras simples, la nutrición no es hacer dieta, es aprender a vivir mejor."
             ],
             icon: "Scale",
-            image: "/images/arianna-edited-1.png",
-            imageAlt: "Arianna García explicando nutrición"
+            image: "/images/arianna-can.jpg",
+            imageAlt: "Arianna García analizando productos",
+            imagePosition: "left"
         },
         {
             id: "dieta",
@@ -57,8 +59,9 @@ export const ebookContent = {
                 "Porque la mejor dieta es la que puedes sostener sin sufrirla."
             ],
             icon: "Utensils",
-            image: "/images/arianna-lifestyle.jpg",
-            imageAlt: "Estilo de vida alimenticio consciente"
+            image: "/images/arianna-bag.jpg",
+            imageAlt: "Compra consciente",
+            imagePosition: "right"
         },
         {
             id: "consulta",
@@ -75,7 +78,8 @@ export const ebookContent = {
             ],
             icon: "Stethoscope",
             image: "/images/arianna-consult.jpg",
-            imageAlt: "Consulta con Arianna"
+            imageAlt: "Consulta Nutricional",
+            imagePosition: "left"
         },
         {
             id: "equilibrio",
@@ -90,7 +94,8 @@ export const ebookContent = {
             ],
             icon: "Activity",
             image: "/images/arianna-edited-2.png",
-            imageAlt: "Equilibrio nutricional"
+            imageAlt: "Equilibrio",
+            imagePosition: "right"
         },
         {
             id: "movimiento",
@@ -106,8 +111,9 @@ export const ebookContent = {
                 "El bienestar no se trata solo de comer bien, sino de vivir activamente, descansar, sentirte fuerte y disfrutar el proceso."
             ],
             icon: "Move",
-            image: "/images/arianna-bio.png", // Using bio image for a grounded, personal feel or movement vibe if energetic
-            imageAlt: "Movimiento y vida activa"
+            image: "/images/arianna-bio.png",
+            imageAlt: "Vida activa",
+            imagePosition: "left"
         },
         {
             id: "aprender",
@@ -124,9 +130,9 @@ export const ebookContent = {
                 "Porque nutrirte empieza cuando decides escucharte."
             ],
             icon: "Heart",
-            image: "/images/signature.png", // Signature closing
-            imageAlt: "Firma Arianna García",
-            isSignature: true // Flag to handle styling differently
+            image: "/images/label-closeup.jpg",
+            imageAlt: "Bienestar integral",
+            imagePosition: "right"
         }
     ],
     footer: {
