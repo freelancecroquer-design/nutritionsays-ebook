@@ -8,7 +8,7 @@ export const ebookContent = {
     sections: [
         {
             id: "intro",
-            title: "Introducción: La nutrición no es magia, es acompañamiento",
+            title: "Introducción: La nutrición no es magia",
             subtitle: "“La nutrición no empieza en el plato, empieza en ti.”",
             content: [
                 "Cuando pensamos en nutrición, solemos imaginar dietas, prohibiciones o planes estrictos que prometen cambios inmediatos. Pero la verdadera nutrición es todo lo contrario: es conocimiento, acompañamiento y construcción.",
@@ -20,13 +20,13 @@ export const ebookContent = {
                 "Este ebook es una invitación a ver la nutrición desde un lugar más humano: como una herramienta para conocerte, cuidarte y construir hábitos que perduren."
             ],
             icon: "Sparkles",
-            image: "/images/intro.png",
-            imageAlt: "Arianna disfrutando de un té caliente en un ambiente relajado"
+            image: "/images/arianna-hero.jpg",
+            imageAlt: "Arianna García - NutritionSays"
         },
         {
             id: "que-es-nutricion",
-            title: "Qué es realmente la nutrición (y qué no es)",
-            subtitle: "Adiós a la visión fragmentada",
+            title: "Qué es realmente la nutrición",
+            subtitle: "Adiós a la visión fragmentada y restrictiva",
             content: [
                 "Durante años se ha reducido la nutrición a una serie de instrucciones o menús genéricos.",
                 "“Come esto, evita aquello, cuenta calorías, elimina grupos de alimentos.”",
@@ -34,22 +34,16 @@ export const ebookContent = {
                 "La nutrición y dietética es una ciencia que estudia cómo los alimentos impactan en tu organismo, pero también una disciplina humana que considera tus emociones, tu entorno, tu historia y tu cultura.",
                 "El nutricionista no es un policía alimentario ni un generador de planes restrictivos.",
                 "Es un profesional sanitario que te acompaña a entender tu cuerpo, mejorar tu salud y construir autonomía frente a la comida.",
-                "La nutrición no se trata solo de bajar de peso.",
-                "También se trata de:",
-                "• Prevenir y tratar enfermedades.",
-                "• Mejorar tu relación con la comida.",
-                "• Promover tu bienestar físico y mental.",
-                "• Educarte para que tomes decisiones conscientes y sostenibles.",
                 "En palabras simples, la nutrición no es hacer dieta, es aprender a vivir mejor."
             ],
             icon: "Scale",
-            image: "/images/what-is.png",
-            imageAlt: "Arianna explicando conceptos de nutrición con alimentos reales"
+            image: "/images/arianna-edited-1.png",
+            imageAlt: "Arianna García explicando nutrición"
         },
         {
             id: "dieta",
             title: "La dieta es todo… pero no lo que tú piensas",
-            subtitle: "No es comer menos, es alimentarse diferente",
+            subtitle: "Tu dieta es tu día a día, no un castigo temporal",
             content: [
                 "Cuando escuchamos la palabra “dieta”, casi de inmediato pensamos en restricciones, hambre, ensaladas sin sabor y alimentos “permitidos” o “prohibidos”.",
                 "Pero en realidad, la dieta no es eso.",
@@ -59,71 +53,61 @@ export const ebookContent = {
                 "Y esa forma no tiene que ser aburrida, ni monótona, ni castigo.",
                 "Tu dieta puede incluir todos los grupos de alimentos, adaptados a tus necesidades, horarios, cultura y contexto.",
                 "No existen alimentos buenos o malos.",
-                "Existen contextos, cantidades y frecuencias.",
-                "Un dulce no te enferma, así como una ensalada no te cura.",
                 "La clave está en el equilibrio: en aprender a disfrutar sin culpa y comer con consciencia.",
                 "Porque la mejor dieta es la que puedes sostener sin sufrirla."
             ],
             icon: "Utensils",
-            image: "/images/diet.png",
-            imageAlt: "Arianna disfrutando de una comida balanceada con carbohidratos"
+            image: "/images/arianna-lifestyle.jpg",
+            imageAlt: "Estilo de vida alimenticio consciente"
         },
         {
             id: "consulta",
-            title: "Qué puede esperar un paciente de su consulta nutricional",
+            title: "La Consulta Nutricional",
             subtitle: "No vienes a recibir un menú; vienes a ser escuchado",
             content: [
                 "Cuando llegas a una consulta de nutrición, no vienes a recibir un menú; vienes a ser escuchado.",
                 "La primera consulta no empieza con “qué comes”, sino con “quién eres”.",
                 "Tu historia clínica, tus horarios, tu entorno laboral, tu descanso, tu nivel de estrés, tus emociones, tus creencias y tus hábitos: todo forma parte de tu alimentación.",
                 "El proceso que seguimos en consulta es integral y se adapta a ti:",
-                "1. Evaluación clínica y alimentaria completa.",
-                "2. Escucha activa y contextualización.",
-                "3. Definición de objetivos sostenibles.",
-                "4. Diseño de plan alimentario individualizado.",
-                "5. Acompañamiento continuo.",
+                "Evaluación clínica y alimentaria completa, Escucha activa, Definición de objetivos sostenibles y Acompañamiento continuo.",
                 "La consulta nutricional no busca imponer; busca guiarte con respeto, empatía y claridad.",
                 "Tu alimentación es parte de tu historia, y por eso, no puede copiarse de nadie más."
             ],
             icon: "Stethoscope",
-            image: "/images/consultation.png",
-            imageAlt: "Arianna escuchando atentamente en consulta"
+            image: "/images/arianna-consult.jpg",
+            imageAlt: "Consulta con Arianna"
         },
         {
             id: "equilibrio",
             title: "Saciedad, equilibrio y personalización",
-            subtitle: "Tres pilares fundamentales",
+            subtitle: "Los tres pilares de @nutritionsays",
             content: [
                 "Comer no es solo nutrirse: también es sentir, compartir, disfrutar, conectar.",
                 "Por eso, en @nutritionsays trabajamos tres pilares fundamentales:",
                 "1. La saciedad: La saciedad no es llenarse, es sentirse satisfecho. Es el punto donde tu cuerpo te dice “es suficiente”, sin culpa ni exceso. Aprender a reconocer la saciedad es un ejercicio de conexión interna.",
-                "2. El equilibrio: El equilibrio no es comer perfecto. Es mantener una relación coherente con la comida, donde hay espacio para lo nutritivo y también para lo disfrutable. El cuerpo no necesita rigidez, necesita constancia y coherencia.",
-                "3. La personalización: No existe una sola forma correcta de alimentarse. Cada persona tiene necesidades, gustos, tiempos y contextos distintos. Un plan efectivo es aquel que se ajusta a tu vida real, no el que te exige cambiarla por completo. La nutrición personalizada respeta tu historia, tus preferencias y tu entorno. Por eso, la meta no es seguir una dieta, sino aprender a crear tu propio equilibrio."
+                "2. El equilibrio: El equilibrio no es comer perfecto. Es mantener una relación coherente con la comida, donde hay espacio para lo nutritivo y también para lo disfrutable.",
+                "3. La personalización: No existe una sola forma correcta de alimentarse. Cada persona tiene necesidades, gustos, tiempos y contextos distintos. Un plan efectivo es aquel que se ajusta a tu vida real, no el que te exige cambiarla por completo."
             ],
             icon: "Activity",
-            image: "/images/learning.png", // Reusing lifestyle image if fitting or fallback
-            imageAlt: "Balance y aprendizaje"
+            image: "/images/arianna-edited-2.png",
+            imageAlt: "Equilibrio nutricional"
         },
         {
             id: "movimiento",
-            title: "Movimiento: tu cuerpo fue hecho para vivir, no para castigarse",
-            subtitle: "Moverte es celebrar, no compensar",
+            title: "Movimiento y NEAT",
+            subtitle: "Tu cuerpo fue hecho para vivir, no para castigarse",
             content: [
                 "“El ejercicio no es el castigo por lo que comiste, es el regalo que le haces a tu cuerpo por lo que puede hacer.”",
                 "Durante mucho tiempo, el ejercicio se asoció a compensar excesos o buscar un cuerpo ideal. Pero el movimiento va mucho más allá.",
                 "Moverte es vivir en acción, es permitirle a tu cuerpo hacer aquello para lo que fue diseñado.",
-                "El ejercicio no tiene que ser extremo ni doloroso.",
-                "No necesitas pasar horas en el gimnasio ni seguir rutinas imposibles para mantenerte activo.",
-                "La clave está en encontrar el movimiento que disfrutes: caminar, bailar, nadar, subir escaleras, pasear a tu mascota, jugar con tus hijos, limpiar tu casa con música.",
-                "Todo suma.",
-                "Eso también es actividad física cotidiana (NEAT): todos esos movimientos pequeños que hacemos fuera del ejercicio formal y que, sumados, impactan de manera positiva en nuestra salud.",
+                "El ejercicio no tiene que ser extremo ni doloroso. La clave está en encontrar el movimiento que disfrutes: caminar, bailar, nadar, subir escaleras, pasear a tu mascota.",
+                "Todo suma. Eso también es actividad física cotidiana (NEAT).",
                 "Moverte es una forma de agradecerle a tu cuerpo todo lo que hace por ti cada día.",
-                "No como castigo, sino como una celebración.",
                 "El bienestar no se trata solo de comer bien, sino de vivir activamente, descansar, sentirte fuerte y disfrutar el proceso."
             ],
             icon: "Move",
-            image: "/images/movement.png",
-            imageAlt: "Arianna caminando feliz en el parque"
+            image: "/images/arianna-bio.png", // Using bio image for a grounded, personal feel or movement vibe if energetic
+            imageAlt: "Movimiento y vida activa"
         },
         {
             id: "aprender",
@@ -133,21 +117,20 @@ export const ebookContent = {
                 "La nutrición no debería generar miedo, culpa ni frustración.",
                 "Debería generar comprensión, calma y autonomía.",
                 "Nutrirte no es comer perfecto, es conocerte mejor.",
-                "Es darte permiso para aprender, equivocarte y ajustar.",
                 "Es construir un estilo de vida donde la comida deje de ser un enemigo o una obsesión, y vuelva a ser lo que siempre fue: una forma de cuidarte.",
-                "@nutritionsays existe para recordarte que no necesitas una dieta para cambiar tu vida.",
-                "Necesitas información clara, acompañamiento profesional y un espacio seguro para transformar tus hábitos desde la consciencia.",
+                "@nutritionsays existe para recordarte que no necesitas una dieta para cambiar tu vida. Necesitas información clara y un espacio seguro.",
                 "“La nutrición no es magia. Es conocimiento, acompañamiento y construcción de hábitos que perduran.”",
                 "Te invito a seguir aprendiendo, a reconectarte con tu bienestar y a hacer de tu proceso nutricional un camino de autoconocimiento.",
                 "Porque nutrirte empieza cuando decides escucharte."
             ],
             icon: "Heart",
-            image: "/images/learning.png",
-            imageAlt: "Arianna leyendo relajada"
+            image: "/images/signature.png", // Signature closing
+            imageAlt: "Firma Arianna García",
+            isSignature: true // Flag to handle styling differently
         }
     ],
     footer: {
-        thanks: "✨ Gracias por leer. Que este ebook sea el inicio de un camino más amable y consciente con tu cuerpo, tu mente y tu relación con la comida.",
+        thanks: "✨ Gracias por leer. Que este ebook sea el inicio de un camino más amable y consciente.",
         tagline: "@nutritionsays — La nutrición no empieza en el plato, empieza en ti."
     }
 };

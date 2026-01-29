@@ -30,76 +30,73 @@ const iconMap: Record<string, any> = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen pb-32 bg-[#fdfbf7] overflow-x-hidden selection:bg-[#c8db6c] selection:text-[#240046]">
+    <main className="min-h-screen pb-32 bg-[#fff] overflow-x-hidden selection:bg-[#c8db6c] selection:text-[#240046] font-sans">
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full p-8 z-50 flex justify-between items-center mix-blend-difference text-white no-print pointer-events-none">
-        <span className="font-serif font-bold text-2xl tracking-tighter">NutritionSays</span>
+        <Image src="/images/logo-brand-full.png" alt="NutritionSays" width={140} height={40} className="invert brightness-0" />
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] flex flex-col justify-center px-6 print:min-h-0 print:h-auto">
-        <div className="absolute inset-0 z-0 bg-[#fdfbf7]">
-          {/* Organic Mesh Gradient Background */}
-          <div className="absolute top-[-20%] right-[-10%] w-[70vw] h-[70vw] bg-[#c8db6c] rounded-full blur-[150px] opacity-20" />
-          <div className="absolute bottom-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-[#b9b1ff] rounded-full blur-[150px] opacity-20" />
-        </div>
+      <section className="relative min-h-[100svh] flex flex-col justify-center px-6 print:min-h-0 print:h-auto print:block">
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center pt-20">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-0 items-center pt-0 h-screen">
 
-          {/* Hero Text */}
+          {/* Hero Text Overlay (Kinfolk Style - Centered or overlapping) */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="md:col-span-12 lg:col-span-5 text-center lg:text-left order-2 lg:order-1"
+            className="md:col-span-5 h-full flex flex-col justify-center z-20 px-4 md:px-12 bg-white/30 backdrop-blur-sm md:bg-transparent"
           >
-            <div className="inline-block px-4 py-1.5 rounded-full border border-[#240046]/20 text-[#240046] text-xs font-bold tracking-widest uppercase mb-8">
-              Ebook Guide 2026
+            <div className="mb-6">
+              <span className="text-[#240046] font-bold tracking-[0.3em] uppercase text-xs border-b border-[#240046] pb-2">
+                Guía Oficial 2026
+              </span>
             </div>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold leading-[0.9] text-[#240046] mb-8 tracking-tight">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold leading-[0.85] text-[#240046] mb-8 tracking-tighter">
               Nutrir es <br />
-              <span className="italic text-[#008b92]">más que comer</span>
+              <span className="italic text-[#008b92] font-normal">más que</span> <br />
+              comer.
             </h1>
-            <p className="text-xl text-[#240046]/70 leading-relaxed font-sans max-w-lg mx-auto lg:mx-0 mb-10">
+            <p className="text-xl text-[#240046] leading-relaxed font-normal max-w-lg mb-12">
               {ebookContent.subtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start print:hidden">
+            <div className="flex flex-col sm:flex-row gap-4 print:hidden">
               <button
                 onClick={() => document.getElementById('content-start')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-4 bg-[#240046] text-white rounded-full font-bold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                className="px-10 py-4 bg-[#240046] text-white rounded-none font-bold hover:bg-[#3a0a63] transition-all duration-300 tracking-widest uppercase text-xs"
               >
-                Comenzar Lectura <BookOpen size={18} />
+                Leer Ebook
               </button>
               <button
                 onClick={() => window.print()}
-                className="px-8 py-4 bg-white border border-[#240046]/10 text-[#240046] rounded-full font-bold hover:bg-[#f0ece5] transition-all flex items-center justify-center gap-2"
+                className="px-10 py-4 border border-[#240046] text-[#240046] rounded-none font-bold hover:bg-[#240046] hover:text-white transition-all duration-300 tracking-widest uppercase text-xs"
               >
-                <Download size={18} /> PDF
+                Descargar PDF
               </button>
             </div>
           </motion.div>
 
-          {/* Hero Image */}
+          {/* Hero Image - Full Height Right Side */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, rotate: -2 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="md:col-span-12 lg:col-span-7 relative h-[60vh] lg:h-[80vh] w-full order-1 lg:order-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            className="absolute top-0 right-0 w-full md:w-[60%] h-full z-0 md:relative md:col-span-7 md:h-full"
           >
-            <div className="relative w-full h-full rounded-tl-[100px] rounded-br-[100px] rounded-tr-[20px] rounded-bl-[20px] overflow-hidden shadow-2xl">
+            <div className="relative w-full h-full">
               <Image
-                src="/images/cover.png"
+                src="/images/arianna-hero.jpg"
                 alt="Arianna García"
                 fill
-                className="object-cover object-top hover:scale-105 transition-transform duration-[2s]"
+                className="object-cover object-center md:object-left" // Focus on her
                 quality={100}
                 priority
               />
-              <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-[#240046]/80 to-transparent text-white">
-                <p className="font-serif italic text-2xl">Por {ebookContent.author}</p>
-              </div>
+              {/* Gradient for text readability only on mobile */}
+              <div className="absolute inset-0 bg-white/70 md:hidden" />
             </div>
           </motion.div>
         </div>
@@ -107,24 +104,25 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[#240046]/30 animate-bounce print:hidden"
+          transition={{ delay: 2, duration: 1 }}
+          className="absolute bottom-8 left-8 hidden md:block text-[#240046] font-serif italic text-lg"
         >
-          <ArrowDown size={32} />
+          Por {ebookContent.author}
         </motion.div>
       </section>
 
       {/* Content Stream */}
-      <section id="content-start" className="relative px-6 py-32 max-w-7xl mx-auto print:py-0">
+      <section id="content-start" className="relative px-6 py-40 max-w-[1200px] mx-auto print:py-0">
 
-        <div className="text-center mb-32 max-w-3xl mx-auto space-y-8">
-          <Image src="/images/logo-brand.png" alt="NutritionSays" width={120} height={120} className="mx-auto rounded-full shadow-lg" />
-          <p className="text-2xl font-serif italic text-[#240046]/80 leading-relaxed">
+        <div className="text-center mb-40 max-w-4xl mx-auto space-y-12">
+          <div className="w-[1px] h-32 bg-[#240046] mx-auto mb-8" />
+          <p className="text-3xl md:text-4xl font-serif text-[#240046] leading-tight italic">
             "No vengo a venderte milagros, vengo a ofrecerte herramientas para que navegues tu alimentación con criterio propio y paz mental."
           </p>
+          <Image src="/images/signature.png" alt="Firma Arianna" width={200} height={100} className="mx-auto opacity-80" />
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-4">
           {ebookContent.sections.map((section, index) => (
             <SectionCard
               key={section.id}
@@ -136,11 +134,11 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="mt-32 pt-20 border-t border-[#240046]/10 text-center pb-12 print:hidden">
-          <h2 className="text-4xl font-serif font-bold text-[#240046] mb-6">NutritionSays</h2>
-          <p className="max-w-md mx-auto text-[#240046]/60 mb-8">{ebookContent.footer.thanks}</p>
-          <div className="inline-block px-6 py-3 bg-[#c8db6c]/20 text-[#5c662d] rounded-full text-sm font-bold tracking-widest uppercase">
-            {ebookContent.instagram}
+        <div className="mt-40 pt-24 border-t border-[#240046]/10 text-center pb-24 bg-[#f8f8f8] -mx-6 px-6 print:hidden">
+          <Image src="/images/logo-brand-full.png" alt="NutritionSays" width={200} height={60} className="mx-auto mb-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all" />
+          <p className="max-w-md mx-auto text-[#240046]/60 mb-8 font-serif italic">{ebookContent.footer.thanks}</p>
+          <div className="text-xs tracking-[0.2em] uppercase text-[#240046]/40">
+            © 2026 NutritionSays. All Rights Reserved.
           </div>
         </div>
       </section>
