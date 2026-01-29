@@ -58,6 +58,22 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans);
   line-height: 1.6;
+  overflow-x: hidden;
+  /* Snap Scroll behavior */
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+/* Custom Utilities requested in specs */
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(185, 177, 255, 0.5);
+  color: transparent;
 }
 
 h1,
