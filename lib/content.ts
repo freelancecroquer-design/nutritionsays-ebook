@@ -1,57 +1,57 @@
 
 export const ebookContent = {
     title: "Nutrir es más que comer",
-    subtitle: "Hábitos sostenibles, ciencia y vida real.",
+    subtitle: "Una guía para entender qué hace realmente un nutricionista y cómo la nutrición puede transformar tu bienestar desde adentro.",
     author: "Arianna García",
     brand: "NutritionSays",
     sections: [
         {
             id: "intro",
             title: "Introducción",
-            subtitle: "La nutrición no es magia",
-            content: "La nutrición no es magia negra ni una fórmula secreta que solo unos pocos elegidos poseen. Es, en su esencia más pura, acompañamiento. Es entender que comer es el acto más repetido de tu vida y que merece ser tratado con dignidad, no con miedo. No vengo a venderte milagros, vengo a ofrecerte herramientas para que navegues tu alimentación con criterio propio y paz mental.",
+            subtitle: "La nutrición no es magia, es acompañamiento",
+            content: "“La nutrición no empieza en el plato, empieza en ti.” Cuando pensamos en nutrición, solemos imaginar dietas, prohibiciones o planes estrictos que prometen cambios inmediatos. Pero la verdadera nutrición es todo lo contrario: es conocimiento, acompañamiento y construcción. @nutritionsays nace de esa necesidad de devolverle humanidad y ciencia a una disciplina que, más que decirnos qué comer, nos enseña a entender por qué y cómo lo hacemos. Mi propósito como nutricionista no es transformar tu cuerpo en pocas semanas, sino acompañarte a reconciliarte con tu alimentación. La nutrición no es magia. Es un proceso gradual de aprendizaje y consciencia. Este ebook es una invitación a ver la nutrición desde un lugar más humano: como una herramienta para conocerte, cuidarte y construir hábitos que perduren.",
             icon: "Sparkles"
         },
         {
             id: "que-es-nutricion",
             title: "¿Qué es Nutrición?",
             subtitle: "Adiós al policía alimentario",
-            content: "Olvídate del policía alimentario que vive en tu cabeza. La nutrición no se trata de perseguirte con una regla para medir si comiste 'bueno' o 'malo'. Es la ciencia de darle a tu cuerpo la materia prima para existir, reparar tejidos y funcionar óptimamente. En Caracas, en Madrid o en San Blas, tu biología pide lo mismo: respeto, nutrientes y suficiente energía.",
+            content: "Durante años se ha reducido la nutrición a una serie de instrucciones: “Come esto, evita aquello”. Esa visión fragmentada ha distorsionado el verdadero sentido de la profesión. El nutricionista no es un policía alimentario ni un generador de planes restrictivos. Es un profesional sanitario que te acompaña a entender tu cuerpo. La nutrición no se trata solo de bajar de peso; se trata de prevenir enfermedades, mejorar tu relación con la comida y promover tu bienestar. En palabras simples, la nutrición no es hacer dieta, es aprender a vivr mejor.",
             icon: "Scale"
         },
         {
             id: "dieta",
             title: "La Palabra 'Dieta'",
-            subtitle: "Significa todo lo que comes",
-            content: "Dieta es todo lo que comes en un día, desde que te levantas hasta que te acuestas. La empanada del desayuno entra. La ensalada del almuerzo entra. 'Estar a dieta' como sinónimo de sufrimiento es un concepto obsoleto. Lo que buscamos no es restricción ciega, sino dirección inteligente. Pregúntate: ¿Tu dieta actual te acerca a la salud o te aleja de tu paz mental?",
+            subtitle: "Es todo lo que comes",
+            content: "Cuando escuchamos “dieta”, pensamos en hambre y prohibición. Pero dieta es todo lo que comes en un día, desde el desayuno hasta el último bocado. Dieta no significa “comer menos”, significa “alimentarse de una forma determinada”. Y esa forma no tiene que ser un castigo. Tu dieta puede incluir todos los grupos de alimentos. No existen alimentos buenos o malos, existen contextos, cantidades y frecuencias. Un dulce no te enferma, así como una ensalada no te cura. La clave está en el equilibrio: la mejor dieta es la que puedes sostener sin sufrirla.",
             icon: "Utensils"
         },
         {
             id: "consulta",
             title: "La Consulta",
-            subtitle: "Evaluación en contexto",
-            content: "No soy un juez y mi consultorio no es un tribunal. En mi consulta no hay banquillo de acusados. Hay contexto. Evaluamos tu vida real: tus horarios locos, tu presupuesto, tus gustos, tu cultura. Porque una pauta nutricional 'perfecta' en papel, si no cabe en tu rutina real del lunes a viernes, simplemente no sirve.",
+            subtitle: "Quién eres por sobre qué comes",
+            content: "Cuando llegas a una consulta de nutrición, no vienes a recibir un menú; vienes a ser escuchado. La primera consulta no empieza con “qué comes”, sino con “quién eres”: tu historia, tus horarios, tu estrés, tus emociones. El proceso es integral: evaluación clínica, escucha activa, objetivos sostenibles y acompañamiento continuo. La consulta nutricional no busca imponer, busca guiarte con respeto y empatía. Tu alimentación es parte de tu historia, y por eso, no puede copiarse de nadie más.",
             icon: "Stethoscope"
         },
         {
             id: "equilibrio",
-            title: "Equilibrio y Saciedad",
-            subtitle: "Personalización real",
-            content: "El hambre no es tu enemiga, es tu tablero de control biológico. Aprender a escuchar tus señales de saciedad es más potente a largo plazo que contar calorías obsesivamente. Personalizamos tu plato para que te nutra y te llene, buscando ese equilibrio donde la proteína es reina, los vegetales aportan color y el placer no es un intruso, sino parte de la ecuación.",
+            title: "Saciedad, Equilibrio y Personalización",
+            subtitle: "Tres pilares fundamentales",
+            content: "Comer no es solo nutrirse: también es sentir y disfrutar. Trabajamos tres pilares: 1. La Saciedad: No es llenarse, es sentirse satisfecho; es un ejercicio de conexión interna. 2. El Equilibrio: No es comer perfecto, es mantener una relación coherente con la comida, dando espacio tanto a lo nutritivo como a lo disfrutable. 3. La Personalización: No existe una sola forma correcta de alimentarse. Un plan efectivo es aquel que se ajusta a tu vida real, respetando tu historia y entorno. La meta no es seguir una dieta, sino aprender a crear tu propio equilibrio.",
             icon: "Activity"
         },
         {
             id: "movimiento",
             title: "Movimiento y NEAT",
-            subtitle: "Moverse no es castigo",
-            content: "Moverse no es el castigo por haber comido ni la penitencia por el postre. Es la celebración de que tu cuerpo puede hacerlo. El NEAT (toda esa actividad física que no es ejercicio programado) suma más de lo que crees. Sube escaleras, camina, baila mientras cocinas. Tu cuerpo está diseñado evolutivamente para el movimiento, no para la inercia constante.",
+            subtitle: "Moverse es celebrar, no castigar",
+            content: "“El ejercicio no es el castigo por lo que comiste, es el regalo que le haces a tu cuerpo por lo que puede hacer.” Moverse es vivir en acción. No necesitas rutinas extremas; la clave está en encontrar el movimiento que disfrutes: caminar, bailar, jugar. Todo suma, incluido el NEAT (actividad física cotidiana). Moverte es una forma de agradecerle a tu cuerpo todo lo que hace por ti. El bienestar no se trata solo de comer bien, sino de vivir activamente y sentirte fuerte.",
             icon: "Move"
         },
         {
             id: "aprender",
             title: "Aprender a Comer",
-            subtitle: "Sin culpa, con ciencia",
-            content: "Comer sin culpa es la meta final. Entender que un día 'perfecto' no existe, pero un hábito sostenible sí. Nutrir es más que comer; es construir un vehículo (tu cuerpo) que te permita vivir plenamente, trabajar, disfrutar y estar presente. La culpa no quema calorías, solo quema tu paz.",
+            subtitle: "Conocimiento, no sufrimiento",
+            content: "La nutrición no debería generar miedo ni culpa. Debería generar comprensión y calma. Nutrirte no es comer perfecto, es conocerte mejor. Es construir un estilo de vida donde la comida deje de ser un enemigo para volver a ser una forma de cuidarte. @nutritionsays existe para recordarte que no necesitas una dieta para cambiar tu vida, necesitas información clara y un espacio seguro. Nutrirte empieza cuando decides escucharte. Gracias por leer.",
             icon: "Heart"
         }
     ]
