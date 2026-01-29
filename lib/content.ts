@@ -10,9 +10,9 @@ export const ebookContent = {
             id: "intro",
             title: "Portada",
             subtitle: "La nutrición no empieza en el plato, empieza en ti",
-            content: [], // Handled specifically in layout
+            content: [],
             icon: "Sparkles",
-            image: "/images/arianna-pointing.jpg",
+            image: "/images/arianna-new-seated.jpg",
             imageAlt: "Arianna García Wellness",
             imagePosition: "right"
         },
@@ -29,8 +29,8 @@ export const ebookContent = {
                 "El nutricionista modeno no es un juez, es tu aliado estratégico."
             ],
             icon: "Scale",
-            image: "/images/arianna-can.jpg",
-            imageAlt: "Arianna con fruta fresca",
+            image: "/images/arianna-nutricion-real.png",
+            imageAlt: "Arianna Explicando",
             imagePosition: "right"
         },
         {
@@ -46,76 +46,72 @@ export const ebookContent = {
                 "La mejor dieta es aquella que puedes sostener el resto de tu vida sin sentir que estás sufriendo."
             ],
             icon: "Utensils",
-            image: "/images/arianna-bag.jpg",
+            image: "/images/arianna-new-market.jpg",
             imageAlt: "Arianna en el mercado",
             imagePosition: "left"
         },
         {
             id: "consulta",
-            title: "La Consulta Nutricional",
-            subtitle: "Escucha activa y empatía",
+            title: "Más que un plan de alimentación",
+            subtitle: "El valor de ser escuchado",
             content: [
-                "Cuando entras a consulta, no busco darte un papel con un menú genérico.",
-                "Busco entender quién eres. Tu historia clínica es importante, pero tu historia de vida lo es más.",
-                "Analizamos juntos:",
-                "• Tus horarios y nivel de estrés.",
-                "• Tu relación emocional con la comida.",
-                "• Tus gustos y cultura gastronómica.",
-                "No vienes a ser juzgado, vienes a ser escuchado y comprendido."
+                "Lo que pasa en consulta es un espacio seguro para tu transformación.",
+                "• Análisis Clínico: Evaluamos tu salud desde la raíz.",
+                "• Entorno: Tu trabajo, horarios y familia cuentan.",
+                "• Emociones: La comida y cómo te sientes están conectados.",
+                "• Hábitos: Pequeños cambios, grandes resultados."
             ],
             icon: "Stethoscope",
-            image: "/images/arianna-consult.jpg",
-            imageAlt: "Arianna en consulta con laptop",
-            imagePosition: "right"
+            image: "/images/arianna-consulta.png",
+            imageAlt: "Arianna en Consulta",
+            imagePosition: "center"
         },
         {
             id: "saciedad",
             title: "Los 3 Pilares",
             subtitle: "Saciedad, Equilibrio y Personalización",
             content: [
-                // Content handled typically by the 3-card layout
-                "Saciedad: Aprender a escuchar cuando tu cuerpo dice 'basta'.",
-                "Equilibrio: Disfrutar de un postre sin culpa es parte de la salud.",
-                "Personalización: No existe una fórmula única, solo existe TU fórmula."
+                "El método NutritionSays se basa en tres fundamentos innegociables:",
+                "1. Saciedad: Aprender a escuchar a tu cuerpo.",
+                "2. Equilibrio: Nutrición sin obsesión.",
+                "3. Personalización: Porque tú no eres un promedio estadístico."
             ],
             icon: "Activity",
-            image: "/images/arianna-bio.png", // Using bio image for meditation/peace vibes
-            imageAlt: "Bienestar y equilibrio",
-            imagePosition: "center"
+            image: "/images/arianna-new-meditate.jpg",
+            imageAlt: "Arianna Meditando",
+            imagePosition: "right"
         },
         {
             id: "movimiento",
-            title: "Movimiento y NEAT",
-            subtitle: "Tu cuerpo pide acción",
+            title: "Movimiento es vida",
+            subtitle: "Tu cuerpo está diseñado para moverse",
             content: [
-                "El ejercicio no es el precio que pagas por comer. Es la celebración de lo que tu cuerpo puede hacer.",
-                "No necesitas 2 horas de gimnasio si no te gusta. Necesitas:",
-                "• Mayor actividad física cotidiana (NEAT).",
-                "• Encontrar una actividad que realmente disfrutes.",
-                "• Moverte para sentirte fuerte, no para 'quemar' nada.",
-                "Caminar, bailar, jugar con tu mascota... todo suma."
+                "El ejercicio no es una cuota que pagar por lo que comiste.",
+                "Es la celebración de lo que tu cuerpo es capaz de hacer. Encuentra algo que ames y hazlo parte de ti.",
+                "• Incrementa tu NEAT (actividad fuera del gimnasio).",
+                "• Prioriza la fuerza para tu longevidad.",
+                "• El descanso también es parte del entrenamiento."
             ],
             icon: "Move",
-            image: "/images/arianna-pointing.jpg", // Reusing active looking pose if possible, or generic
-            imageAlt: "Arianna en movimiento",
-            imagePosition: "full"
+            image: "/images/arianna-movimiento.png",
+            imageAlt: "Arianna Active",
+            imagePosition: "left"
         },
         {
             id: "aprender",
-            title: "Aprender a comer",
+            title: "Takeaways Finales",
             subtitle: "Conocimiento es poder",
             content: [
-                "Leer etiquetas no tiene que ser abrumador.",
-                "Aprenderás a identificar:",
-                "• Ingredientes reales vs. marketing engañoso.",
-                "• La importancia de la proteína en cada comida.",
-                "• Cómo armar un plato inteligente en cualquier restaurante.",
-                "La autonomía nutricional es la meta final."
+                "Te llevas herramientas para toda la vida:",
+                "• La nutrición es autocuidado, no castigo.",
+                "• Escucha a tu cuerpo, él tiene las respuestas.",
+                "• La constancia vence a la intensidad.",
+                "Gracias por permitirme ser parte de tu camino hacia el bienestar."
             ],
             icon: "Heart",
-            image: "/images/label-closeup.jpg",
-            imageAlt: "Leyendo etiquetas",
-            imagePosition: "left"
+            image: "/images/arianna-aprender.png",
+            imageAlt: "Arianna Cierre",
+            imagePosition: "right"
         },
         {
             id: "footer-cta", // Section 8

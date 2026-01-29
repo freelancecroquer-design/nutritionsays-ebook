@@ -64,122 +64,103 @@ export default function Home() {
         ))}
       </div>
 
-      <main className="w-full">
+      <main className="w-full font-sans text-[#240046]">
 
-        {/* --- SECTION 1: PORTADA PIXEL PERFECT --- */}
-        <section id="intro" className="h-screen w-full snap-start relative overflow-hidden flex flex-col justify-center items-center bg-[radial-gradient(circle_at_center,_#240046_0%,_#1a0033_100%)] text-white">
+        {/* --- SECTION 1: HERO / PORTADA (Refined Mobile & Desktop) --- */}
+        <section id="intro" className="min-h-screen w-full snap-start relative flex flex-col items-center justify-center bg-[#240046] overflow-hidden pt-20 md:pt-0">
+          {/* Background Elements */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#4a0a77_0%,_#240046_60%)]"></div>
+          <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
 
-          {/* Background Texture/Noise */}
-          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/linen.png')] mix-blend-overlay pointer-events-none"></div>
+          {/* Content Container */}
+          <div className="relative z-10 container mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between">
 
-          {/* Logo: Absolute Top Left (Reduced Size) */}
-          <div className="absolute top-8 left-8 md:top-12 md:left-12 opacity-90 z-20">
-            <div className="w-20 md:w-24 h-12 relative">
-              <Image src="/images/logo-arianna-new.png" alt="NutritionSays" fill className="object-contain brightness-0 invert" />
-            </div>
-          </div>
+            {/* Text Side (Top on mobile) */}
+            <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left z-20 mb-8 md:mb-0">
+              <div className="mb-6 relative">
+                <span className="block text-[#c8db6c] tracking-[0.3em] text-xs md:text-sm font-bold uppercase mb-2">Ebook Oficial 2026</span>
+                <div className="h-1 w-12 bg-[#c8db6c] mx-auto md:mx-0"></div>
+              </div>
 
-          <div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row items-center h-full">
-
-            {/* Text Content Center/Left */}
-            <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left pt-20 md:pt-0">
-              <span className="font-serif font-bold tracking-widest text-sm md:text-base mb-6 text-[#c8db6c] uppercase">
-                Ebook Oficial 2026
-              </span>
-              <h1 className="font-serif font-extrabold text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 text-shadow-lg">
-                NUTRIR ES<br />MÁS QUE<br />COMER
+              <h1 className="font-serif font-extrabold text-5xl md:text-7xl lg:text-9xl text-white leading-[0.9] tracking-tight mb-6 drop-shadow-2xl">
+                NUTRIR<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c8db6c] to-[#fff]">ES MÁS</span><br />
+                QUE COMER
               </h1>
-              <p className="font-serif italic text-xl md:text-2xl opacity-90 font-light max-w-lg leading-relaxed">
+
+              <p className="text-white/80 text-lg md:text-2xl font-light max-w-md leading-relaxed mb-8">
                 {ebookContent.subtitle}
               </p>
 
               <button
                 onClick={() => document.getElementById('nutricion-real')?.scrollIntoView({ behavior: 'smooth' })}
-                className="mt-12 bg-[#c8db6c] hover:bg-[#b9b1ff] text-[#240046] hover:text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
+                className="group relative px-8 py-4 bg-[#c8db6c] text-[#240046] font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(200,219,108,0.5)]"
               >
-                Leer Ebook
+                <span className="relative z-10 flex items-center gap-2">
+                  EMPEZAR A LEER <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
               </button>
             </div>
 
-            {/* Image Hero Right 55% with Custom Radius */}
-            <div className="w-full md:w-1/2 h-[50vh] md:h-[85vh] relative mt-10 md:mt-0">
-              <div className="absolute top-0 right-0 bottom-0 left-4 md:left-20 bg-[#240046] rounded-tl-[100px] md:rounded-bl-[100px] overflow-hidden border-l-4 border-[#c8db6c]/30 shadow-2xl">
+            {/* Image Side (Bottom on mobile) */}
+            <div className="w-full md:w-1/2 h-[45vh] md:h-[90vh] relative flex items-end justify-center md:justify-end mt-4 md:mt-0">
+              {/* Decorative Circle Behind */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] md:w-[600px] h-[280px] md:h-[600px] bg-[#b9b1ff] rounded-full blur-[80px] opacity-20"></div>
+
+              <div className="relative w-full h-full max-w-sm md:max-w-none">
                 <Image
-                  src={ebookContent.sections[0].image || "/images/arianna-pointing.jpg"}
-                  alt="Arianna Hero"
+                  src={ebookContent.sections[0].image || "/images/arianna-new-seated.jpg"}
+                  alt="Arianna Intro"
                   fill
-                  className="object-cover object-top opacity-90 hover:scale-105 transition-transform duration-[2s]"
+                  className="object-contain object-bottom md:object-right-bottom drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#240046] via-transparent to-transparent opacity-60"></div>
               </div>
             </div>
-          </div>
-
-          <div className="absolute bottom-8 animate-bounce text-white/50">
-            <ArrowDown size={32} />
           </div>
         </section>
 
 
-        {/* --- SECTION 2: NUTRICION REAL (Clean Layout) --- */}
-        <section id="nutricion-real" className="h-screen w-full snap-start relative flex items-center bg-white overflow-hidden">
-          <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="relative z-10 pl-8 md:pl-20">
-              {/* Decorative Dot */}
-              <div className="absolute -left-4 top-0 w-20 h-20 rounded-full border border-[#c8db6c] opacity-50 -z-10"></div>
+        {/* --- SECTION 2: NUTRICION REAL (Editorial / Clean) --- */}
+        <section id="nutricion-real" className="min-h-screen w-full snap-start relative flex items-center bg-white py-20 px-4 md:px-0">
+          <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
 
-              <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#240046] leading-[1.1] mb-12">
-                QUÉ ES REALMENTE<br />LA NUTRICIÓN
+            {/* Image Column */}
+            <div className="col-span-1 md:col-span-5 relative order-2 md:order-1">
+              <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl transform md:-rotate-3 hover:rotate-0 transition-all duration-500">
+                <Image src={ebookContent.sections[1].image || "/images/arianna-nutricion-real.png"} alt="Nutricion Real" fill className="object-cover bg-[#f0f0f0]" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#240046]/20 to-transparent"></div>
+              </div>
+              {/* Floating Element */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#c8db6c] rounded-full flex items-center justify-center shadow-lg animate-pulse hidden md:flex">
+                <span className="font-serif font-bold text-[#240046] text-xl text-center leading-tight">100%<br />Real</span>
+              </div>
+            </div>
+
+            {/* Text Column */}
+            <div className="col-span-1 md:col-span-7 order-1 md:order-2 md:pl-10">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-[#efe8f8] rounded-full flex items-center justify-center text-[#240046]">
+                  <Scale size={24} strokeWidth={1.5} />
+                </div>
+                <span className="uppercase tracking-widest text-xs font-bold text-neutral-400">Capítulo 01</span>
+              </div>
+
+              <h2 className="font-serif font-bold text-4xl md:text-6xl text-[#240046] mb-8 leading-tight">
+                Qué es realmente<br /><span className="text-[#b9b1ff]">la nutrición</span>
               </h2>
 
               <div className="space-y-6 text-lg text-neutral-600 font-light leading-relaxed">
-                {ebookContent.sections[1].content.map((p, i) => {
-                  if (p.startsWith("•")) {
-                    return (
-                      <div key={i} className="flex items-start gap-4 pl-4">
-                        <span className="w-2 h-2 mt-2.5 bg-[#c8db6c] rounded-full shrink-0" />
+                {ebookContent.sections[1].content.map((p, i) => (
+                  p.startsWith("•") ?
+                    (
+                      <div key={i} className="flex gap-4 p-4 bg-[#fafafa] rounded-xl border border-neutral-100 hover:border-[#c8db6c] transition-colors">
+                        <div className="min-w-[8px] h-[8px] mt-2.5 rounded-full bg-[#c8db6c]"></div>
                         <p className="font-medium text-[#240046]">{p.replace("•", "").trim()}</p>
                       </div>
-                    );
-                  }
-                  return <p key={i}>{p}</p>;
-                })}
-              </div>
-            </div>
-
-            {/* Right Image */}
-            <div className="relative h-[60vh] w-full rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500">
-              <Image src={ebookContent.sections[1].image || "/images/arianna-can.jpg"} alt="Nutricion Real" fill className="object-cover" />
-            </div>
-          </div>
-        </section>
-
-
-        {/* --- SECTION 3: DIETA (Gradient BG) --- */}
-        <section id="dieta" className="h-screen w-full snap-start relative flex items-center bg-gradient-to-b from-[#efe8f8]/50 to-white">
-          <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row gap-12 items-center">
-            {/* Left Image */}
-            <div className="relative w-full md:w-1/2 h-[60vh] rounded-[3rem] overflow-hidden shadow-xl border-4 border-white">
-              <Image src={ebookContent.sections[2].image || "/images/arianna-bag.jpg"} alt="Dieta" fill className="object-cover" />
-              {/* Floating Badge */}
-              <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg">
-                <Utensils className="text-[#c8db6c] w-10 h-10" />
-              </div>
-            </div>
-
-            {/* Right Content */}
-            <div className="w-full md:w-1/2">
-              <h2 className="text-5xl md:text-7xl font-serif font-bold text-[#b9b1ff]/30 absolute -top-20 right-0 pointer-events-none select-none">
-                DIETA
-              </h2>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#240046] mb-8 relative z-10">
-                La dieta es todo...<br />pero no lo que piensas
-              </h2>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-[#c8db6c]">
-                {ebookContent.sections[2].content.map((p, i) => (
-                  <p key={i} className="mb-4 text-neutral-600 leading-relaxed">{p}</p>
+                    ) :
+                    <p key={i}>{p}</p>
                 ))}
               </div>
             </div>
@@ -187,147 +168,211 @@ export default function Home() {
         </section>
 
 
-        {/* --- SECTION 4: CONSULTA (Quote Focus) --- */}
-        <section id="consulta" className="h-screen w-full snap-start relative flex flex-col justify-center items-center bg-white">
-          <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
-            <Stethoscope className="w-16 h-16 text-[#b9b1ff] mx-auto mb-8 opacity-50" strokeWidth={1} />
+        {/* --- SECTION 3: DIETA (Split Deep Color) --- */}
+        <section id="dieta" className="min-h-screen w-full snap-start relative flex items-center bg-[#efe8f8]">
+          <div className="container mx-auto px-6 h-full flex flex-col md:flex-row items-stretch">
 
-            <blockquote className="font-serif italic text-3xl md:text-5xl text-[#240046] leading-tight mb-12">
-              "No vienes a recibir un menú;<br />vienes a ser <span className="text-[#008b92] underline decoration-[#c8db6c] decoration-4 underline-offset-4">escuchado</span>."
-            </blockquote>
+            {/* Content Left */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center py-20 pr-0 md:pr-12 relative z-10">
+              <h2 className="font-serif font-bold text-6xl md:text-8xl text-white opacity-100 md:text-[#240046]/10 absolute top-10 left-0 md:-left-20 pointer-events-none select-none">
+                DIETA
+              </h2>
 
-            <div className="flex flex-col md:flex-row items-center gap-8 text-left mt-12 bg-[#fafafa] p-8 rounded-3xl mx-auto shadow-inner max-w-3xl">
-              <div className="w-24 h-24 relative rounded-full overflow-hidden shrink-0 border-4 border-white shadow-md">
-                <Image src={ebookContent.sections[3].image || "/images/arianna-consult.jpg"} alt="Arianna" fill className="object-cover" />
+              <h3 className="font-serif text-3xl md:text-5xl text-[#240046] font-bold mb-6 leading-tight mt-16 md:mt-0">
+                La dieta es todo...<br />
+                <span className="bg-[#c8db6c] px-2 text-white inline-block transform -rotate-1">pero no lo que piensas</span>
+              </h3>
+              <div className="bg-white/90 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-xl space-y-6 border border-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#c8db6c]/10 rounded-full blur-3xl -z-10"></div>
+
+                {ebookContent.sections[2].content.map((p, i) => {
+                  if (p.startsWith("•")) {
+                    return (
+                      <div key={i} className="flex items-start gap-4">
+                        <div className="w-6 h-6 rounded-full bg-[#f7ffd0] flex items-center justify-center shrink-0 mt-0.5 text-[#c8db6c]">
+                          <Utensils size={14} />
+                        </div>
+                        <p className="text-neutral-600 font-medium leading-relaxed">{p.replace("•", "").trim()}</p>
+                      </div>
+                    )
+                  }
+                  return (
+                    <p key={i} className={clsx("text-neutral-600 leading-relaxed", i === 0 ? "font-serif text-xl text-[#240046] italic" : "text-base")}>
+                      {p}
+                    </p>
+                  )
+                })}
               </div>
-              <div>
-                <h4 className="font-bold text-[#240046] text-xl mb-2">En consulta trabajamos:</h4>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-neutral-600">
-                  <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#c8db6c] rounded-full" /> Historia Clínica</li>
-                  <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#c8db6c] rounded-full" /> Entorno Laboral</li>
-                  <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#c8db6c] rounded-full" /> Emociones</li>
-                  <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#c8db6c] rounded-full" /> Hábitos Reales</li>
-                </ul>
+            </div>
+
+            {/* Image Right (Full height) */}
+            <div className="w-full md:w-1/2 relative min-h-[40vh] md:min-h-full">
+              <div className="absolute inset-0 md:inset-4 md:rounded-[40px] overflow-hidden shadow-2xl">
+                <Image src={ebookContent.sections[2].image || "/images/arianna-dieta.png"} alt="Dieta" fill className="object-cover" />
+              </div>
+              <div className="absolute -bottom-10 -left-10 md:bottom-10 md:-left-10 bg-[#240046] text-white p-6 rounded-2xl shadow-xl shadow-[#240046]/30 max-w-xs hidden md:block">
+                <Utensils className="mb-4 text-[#c8db6c]" />
+                <p className="font-bold text-lg">“Tu dieta debe adaptarse a ti, no tú a ella.”</p>
               </div>
             </div>
           </div>
         </section>
 
 
-        {/* --- SECTION 5: SACIEDAD (3 Pillars Cards) --- */}
-        <section id="saciedad" className="h-screen w-full snap-start relative flex flex-col justify-center bg-gradient-to-b from-[#f7ffd0]/20 to-white px-4">
-          <div className="text-center mb-12">
-            <span className="text-[#008b92] font-bold tracking-widest uppercase text-sm">Metodología NutritionSays</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#240046] mt-2">Los 3 Pilares</h2>
-          </div>
+        {/* --- SECTION 4: CONSULTA (Feature Focus) --- */}
+        <section id="consulta" className="min-h-screen w-full snap-start relative flex flex-col items-center justify-center bg-white py-12">
+          <div className="absolute top-0 w-full h-1/2 bg-[#240046] rounded-b-[50px] md:rounded-b-[100px] z-0"></div>
 
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
-            {/* Card 1 */}
-            <div className="bg-white/60 backdrop-blur-xl border border-[#b9b1ff]/30 p-8 rounded-[2rem] shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <div className="bg-[#c8db6c] w-12 h-12 rounded-full flex items-center justify-center text-[#240046] mb-6">1</div>
-              <h3 className="text-2xl font-serif font-bold text-[#240046] mb-4">Saciedad</h3>
-              <p className="text-neutral-600 leading-relaxed">Aprender a escuchar cuando tu cuerpo dice "es suficiente", sin culpa ni exceso. Conexión interna real.</p>
-            </div>
-            {/* Card 2 */}
-            <div className="bg-white/80 backdrop-blur-xl border border-[#b9b1ff] p-8 rounded-[2rem] shadow-xl scale-105 z-10">
-              <div className="bg-[#240046] w-12 h-12 rounded-full flex items-center justify-center text-white mb-6">2</div>
-              <h3 className="text-2xl font-serif font-bold text-[#240046] mb-4">Equilibrio</h3>
-              <p className="text-neutral-600 leading-relaxed">Comer nutritivo y disfrutable. El equilibrio flexible es la única forma de sostenibilidad.</p>
-            </div>
-            {/* Card 3 */}
-            <div className="bg-white/60 backdrop-blur-xl border border-[#b9b1ff]/30 p-8 rounded-[2rem] shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <div className="bg-[#008b92] w-12 h-12 rounded-full flex items-center justify-center text-white mb-6">3</div>
-              <h3 className="text-2xl font-serif font-bold text-[#240046] mb-4">Personalización</h3>
-              <p className="text-neutral-600 leading-relaxed">Tu fórmula es única. Adaptamos el plan a tu vida, no tu vida al plan.</p>
-            </div>
-          </div>
-        </section>
+          <div className="relative z-10 container mx-auto px-4 max-w-5xl">
+            <div className="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col md:flex-row">
 
+              {/* Image Area */}
+              <div className="w-full md:w-5/12 relative min-h-[300px] md:min-h-full bg-neutral-100">
+                <Image src={ebookContent.sections[3].image || "/images/arianna-consulta.png"} alt="Consulta" fill className="object-cover object-center" />
+              </div>
 
-        {/* --- SECTION 6: MOVIMIENTO (Full Image Overlay) --- */}
-        <section id="movimiento" className="h-screen w-full snap-start relative flex items-center justify-center bg-[#240046] text-white">
-          <div className="absolute inset-0 opacity-60">
-            <Image src={ebookContent.sections[5].image || "/images/arianna-run.jpg"} alt="Movimiento" fill className="object-cover" />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#240046]/90 via-[#240046]/40 to-transparent"></div>
+              {/* Content Area */}
+              <div className="w-full md:w-7/12 p-8 md:p-14 flex flex-col justify-center">
+                <Stethoscope className="w-12 h-12 text-[#b9b1ff] mb-6" />
+                <h2 className="font-serif font-bold text-3xl md:text-5xl text-[#240046] mb-2">Más que un plan</h2>
+                <h3 className="font-sans text-[#c8db6c] font-bold uppercase tracking-wider text-sm mb-8">El valor de ser escuchado</h3>
 
-          <div className="relative z-10 max-w-4xl px-8 text-center md:text-left mr-auto md:ml-20">
-            <Move className="w-20 h-20 text-[#c8db6c] mb-6 inline-block md:block" />
-            <h2 className="text-5xl md:text-7xl font-serif font-bold mb-8 text-shadow-lg">
-              Tu cuerpo fue<br />hecho para <span className="italic text-[#c8db6c]">vivir</span>
-            </h2>
-            <p className="text-xl md:text-2xl font-light mb-12 max-w-xl leading-relaxed opacity-90">
-              El ejercicio no es el castigo por lo que comiste. Es la celebración de lo que puedes hacer.
-            </p>
-            <div className="inline-block bg-white/20 backdrop-blur-md border border-white/30 px-8 py-4 rounded-full text-lg font-bold">
-              ✨ Incrementa tu NEAT diario
-            </div>
-          </div>
-        </section>
-
-
-        {/* --- SECTION 7: APRENDER (Clean End) --- */}
-        <section id="aprender" className="h-screen w-full snap-start relative flex items-center bg-white">
-          <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
-            <div className="w-full md:w-1/2 relative order-2 md:order-1">
-              <div className="p-10 border-2 border-[#240046] rounded-tl-[4rem] rounded-br-[4rem] relative">
-                <div className="absolute -top-6 -left-6 bg-white p-2">
-                  <Heart className="w-12 h-12 text-[#b9b1ff]" fill="currentColor" />
-                </div>
-                <h3 className="text-3xl font-serif font-bold text-[#240046] mb-6">Takeaways Finales</h3>
-                <ul className="space-y-4">
-                  {ebookContent.sections[6].content.filter(x => x.startsWith("•")).map((item, i) => (
-                    <li key={i} className="text-lg text-neutral-700 font-medium flex gap-3">
-                      <span className="text-[#c8db6c] text-2xl">•</span> {item.replace("• ", "")}
+                <ul className="grid grid-cols-1 gap-4">
+                  {ebookContent.sections[3].content.slice(1).map((item, i) => (
+                    <li key={i} className="flex items-center gap-4 p-3 hover:bg-neutral-50 rounded-lg transition-colors">
+                      <div className="bg-[#240046] text-white w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0">
+                        {i + 1}
+                      </div>
+                      <span className="text-neutral-700 font-medium">{item.replace("•", "").trim()}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            <div className="w-full md:w-1/2 order-1 md:order-2">
-              <div className="relative h-[400px] w-full rounded-full overflow-hidden border-8 border-[#f7ffd0] shadow-2xl">
-                <Image src={ebookContent.sections[6].image || "/images/arianna-heart.jpg"} alt="Aprender" fill className="object-cover" />
+
+            <div className="text-center mt-12">
+              <p className="text-white/80 font-serif italic text-xl">"No vienes a ser juzgado, vienes a ser escuchado"</p>
+            </div>
+          </div>
+        </section>
+
+
+        {/* --- SECTION 5: SACIEDAD (Interactive Grid) --- */}
+        <section id="saciedad" className="min-h-screen w-full snap-start relative flex flex-col items-center justify-center bg-gradient-to-br from-[#f7ffd0] via-white to-white py-20 px-4">
+          <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
+              <div className="w-full md:w-1/2">
+                <span className="text-[#008b92] font-bold tracking-widest uppercase text-sm mb-2 block">Metodología</span>
+                <h2 className="text-5xl md:text-7xl font-serif font-bold text-[#240046] leading-none mb-6">
+                  Los 3 Pilares<br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c8db6c] to-[#008b92]">NutritionSays</span>
+                </h2>
+                <p className="text-lg text-neutral-600 mb-8 max-w-sm">Porque la nutrición no es una línea recta, es un triángulo de equilibrio constante.</p>
               </div>
-              <div className="text-center mt-8">
-                <h2 className="text-4xl font-serif font-bold text-[#240046]">Conocimiento es Poder</h2>
+              <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px]">
+                <Image src={ebookContent.sections[4].image || "/images/arianna-saciedad.png"} alt="Saciedad" fill className="object-contain" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1 */}
+              <div className="group bg-white p-8 rounded-[2rem] shadow-lg border border-transparent hover:border-[#c8db6c] transition-all hover:-translate-y-2">
+                <div className="w-16 h-16 bg-[#f7ffd0] rounded-2xl flex items-center justify-center text-[#240046] mb-6 group-hover:scale-110 transition-transform">
+                  <Activity />
+                </div>
+                <h3 className="font-serif font-bold text-2xl text-[#240046] mb-3">1. Saciedad</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed">Aprende a escuchar a tu cuerpo. Él sabe cuánto necesitas mejor que cualquier app.</p>
+              </div>
+              {/* Card 2 */}
+              <div className="group bg-[#240046] p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 transition-all">
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-[#c8db6c] mb-6 group-hover:scale-110 transition-transform">
+                  <Scale />
+                </div>
+                <h3 className="font-serif font-bold text-2xl text-white mb-3">2. Equilibrio</h3>
+                <p className="text-white/60 text-sm leading-relaxed">Sin extremos. El 80/20 que te permite disfrutar de la vida mientras te cuidas.</p>
+              </div>
+              {/* Card 3 */}
+              <div className="group bg-white p-8 rounded-[2rem] shadow-lg border border-transparent hover:border-[#008b92] transition-all hover:-translate-y-2">
+                <div className="w-16 h-16 bg-[#e0f7f8] rounded-2xl flex items-center justify-center text-[#008b92] mb-6 group-hover:scale-110 transition-transform">
+                  <Heart />
+                </div>
+                <h3 className="font-serif font-bold text-2xl text-[#240046] mb-3">3. Personal</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed">Tu contexto importa. Adaptamos el plan a tu vida, no tu vida al plan.</p>
               </div>
             </div>
           </div>
         </section>
 
 
-        {/* --- SECTION 8: FOOTER (Dark Gradient) --- */}
-        <section id="footer-cta" className="h-screen w-full snap-start relative flex flex-col justify-center items-center bg-gradient-to-t from-[#0f0020] to-[#240046] text-white">
-          <div className="text-center max-w-3xl px-6">
-            <div className="w-40 h-20 relative mx-auto mb-12 opacity-80">
-              <Image src="/images/logo-arianna-new.png" alt="Logo" fill className="object-contain brightness-0 invert" />
+        {/* --- SECTION 6: MOVIMIENTO (Bold Visuals) --- */}
+        <section id="movimiento" className="min-h-screen w-full snap-start relative flex items-center bg-[#240046] overflow-hidden">
+          <div className="absolute top-0 right-0 w-2/3 h-full bg-[#2a0052] skew-x-12 translate-x-32 hidden md:block"></div>
+
+          <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-full">
+            <div className="relative order-2 md:order-1 h-[50vh] md:h-[80vh] w-full">
+              <Image src={ebookContent.sections[5].image || "/images/arianna-movimiento.png"} alt="Movimiento" fill className="object-contain object-bottom md:object-center" />
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-serif font-bold mb-8">
-              Tu camino empieza hoy
-            </h2>
-            <p className="text-xl text-white/70 mb-16 leading-relaxed">
-              Si este ebook resonó contigo, estoy lista para acompañarte en el siguiente paso de tu proceso.
-            </p>
+            <div className="order-1 md:order-2 text-center md:text-left pt-20 md:pt-0">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#c8db6c] text-[#c8db6c] mb-8">
+                <Move size={16} /> <span>Vida Activa</span>
+              </div>
+              <h2 className="text-5xl md:text-7xl font-serif font-bold text-white mb-8">
+                Tu cuerpo fue<br />hecho para <span className="text-[#c8db6c] italic">vivir</span>
+              </h2>
+              <p className="text-xl text-white/70 font-light mb-12">
+                El ejercicio no es el castigo por lo que comiste. Es la celebración de lo que puedes hacer.
+              </p>
 
-            <a href="https://instagram.com/nutritionsays" target="_blank" className="bg-[#c8db6c] hover:bg-white text-[#240046] font-bold text-xl py-5 px-12 rounded-full shadow-[0_0_30px_rgba(200,219,108,0.4)] transition-all hover:scale-110 inline-flex items-center gap-3">
-              <Instagram /> Consulta Online
-            </a>
+              <div className="grid grid-cols-1 gap-4">
+                <div className="bg-white/5 p-6 rounded-xl border border-white/10 flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[#c8db6c] flex items-center justify-center text-[#240046] font-bold">A</div>
+                  <span className="text-white font-medium">Incrementa tu NEAT diario</span>
+                </div>
+                <div className="bg-white/5 p-6 rounded-xl border border-white/10 flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[#c8db6c] flex items-center justify-center text-[#240046] font-bold">B</div>
+                  <span className="text-white font-medium">Prioriza ejercicios de fuerza</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <div className="mt-24 pt-8 border-t border-white/10 w-full flex justify-between text-sm text-white/30 font-light">
-              <span>© 2026 NutritionSays</span>
-              <span>Designed with Love</span>
+
+        {/* --- SECTION 7: APRENDER / FOOTER (Minimalist Clean) --- */}
+        <section id="aprender" className="min-h-screen w-full snap-start relative flex flex-col justify-between bg-white pt-20">
+          <div className="container mx-auto px-6 flex flex-col md:flex-row gap-12 items-center flex-grow">
+            <div className="w-full md:w-1/2">
+              <Heart className="w-16 h-16 text-[#b9b1ff] mb-6 mx-auto md:mx-0" />
+              <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#240046] mb-8 text-center md:text-left">
+                El conocimiento<br />es poder
+              </h2>
+              <div className="bg-[#fcfcfc] p-8 border-l-4 border-[#c8db6c] shadow-sm">
+                <p className="text-neutral-600 italic text-lg mb-6">"Te llevas herramientas para toda la vida. La nutrición es autocuidado, no castigo."</p>
+                <div className="flex items-center gap-4">
+                  <div className="text-[#240046] font-bold">Arianna García</div>
+                  <div className="h-px flex-grow bg-neutral-200"></div>
+                  <div className="text-neutral-400 text-sm">NutritionSays</div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2 relative h-[400px] md:h-[600px]">
+              <Image src={ebookContent.sections[6].image || "/images/arianna-aprender.png"} alt="Aprender" fill className="object-contain" />
             </div>
           </div>
 
-          {/* PDF Button Fixed Bottom Right */}
-          <button
-            onClick={() => window.print()}
-            className="fixed bottom-8 right-8 bg-white text-[#240046] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 print:hidden"
-            title="Descargar PDF"
-          >
-            <Download size={24} />
-          </button>
+          <div className="bg-[#240046] text-white py-12 px-6">
+            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+              <div className="flex items-center gap-4">
+                <Image src="/images/logo-arianna-new.png" width={40} height={40} alt="Logo" className="brightness-0 invert opacity-50" />
+                <span className="opacity-50 text-sm tracking-widest">© 2026 NUTRITIONSAYS</span>
+              </div>
+
+              <a href="https://instagram.com/nutritionsays" target="_blank" className="flex items-center gap-2 hover:text-[#c8db6c] transition-colors">
+                <Instagram size={20} /> @nutritionsays
+              </a>
+            </div>
+          </div>
         </section>
 
       </main>
